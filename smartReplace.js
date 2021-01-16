@@ -222,7 +222,7 @@ async function downloader_jd() {
             "USER_AGENTS"
         );
     }
-        if (remoteContent.indexOf("jdDreamFactoryShareCodes") > 0) {
+    if (remoteContent.indexOf("jdDreamFactoryShareCodes") > 0) {
         await download(
             "https://github.com/Xukiwen/code/raw/dj_code/jdDreamFactoryShareCodes.js",
             "./jdDreamFactoryShareCodes.js",
