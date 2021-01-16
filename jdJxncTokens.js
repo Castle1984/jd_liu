@@ -18,15 +18,14 @@ if (process.env.JXNCTOKENS) {
     console.log(`您的京喜农场 token 选择的是用换行隔开\n`)
     JxncTokens = process.env.JXNCTOKENS.split('\n');
   } else {
-    JxncTokens = process.env.JXNCTOKENS.split();
+    //JxncTokens = process.env.JXNCTOKENS.split();
+    JxncTokens =  [process.env.JXNCTOKENS]
+    console.log(`您的京喜农场 token 只有一个`)
   }
 } 
 /*else if (process.env.JD_COOKIE) {
   console.log(`由于您secret里面未提供 tokens，当种植 APP 种子时，将不能正常进行任务，请提供 token 或 种植非 APP 种子！`)
 }*/
-JxncTokens = [...new Set(JxncTokens.filter(item => item !== "" && item !== null && item !== undefined))]
-console.log(`\n====================共有${JxncTokens.length}个京喜账号Token=========\n`);
-console.log(`==================脚本执行- 北京时间(UTC+8)：${new Date(new Date().getTime() + new Date().getTimezoneOffset()*60*1000 + 8*60*60*1000).toLocaleString()}=====================\n`)
 for (let i = 0; i < JxncTokens.length; i++) {
   const index = (i + 1 === 1) ? '' : (i + 1);
   exports['JXNCTOKEN' + index] = JxncTokens[i];
