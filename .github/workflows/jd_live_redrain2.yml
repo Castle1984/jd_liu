@@ -6,7 +6,7 @@ name: 直播间红包雨
 on:
     workflow_dispatch:
     schedule:
-        - cron: "8 10-12/1 * * *"
+        - cron: "15 10-12/1 * * *"
     watch:
         types: [started]
     repository_dispatch:
