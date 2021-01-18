@@ -2,10 +2,10 @@
 name: sync scripts
 on:
   schedule:
-    - cron: '5 15 * * *'
+    - cron: '36 14 * * *'
   workflow_dispatch:
   watch:
-    types: started
+    types: [started]
   repository_dispatch:
     types: sync scripts
 jobs:
